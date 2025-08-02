@@ -65,16 +65,16 @@ I’ve also shared detection result images in the `.docx` file.
 
 ##  Model Training Command
 
-## bash (VISUAL STUDIO CODE)
+bash (VISUAL STUDIO CODE)
 python train.py --img 416 --batch 4 --epochs 50 --data data.yaml --cfg models/yolov5n.yaml --weights yolov5n.pt --name drone_yolov5n 
 
-# for image detection
+for image detection
 python detect.py --weights runs/train/drone_yolov5n/weights/last.pt --img 640 --conf 0.25 --source images/val --name drone_yolov5n_detect
 
-#for video detection
+for video detection
 python detect.py --weights runs/train/drone_yolov5n/weights/best.pt --source drone_video.mp4
 
-#for webcam detection
+for webcam detection
 python detect.py --weights runs/train/drone_yolov5n/weights/best.pt --source 0
 
 ## Notes:
